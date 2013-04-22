@@ -75,42 +75,4 @@ class Client
         return $mappedResult;
     }
 
-    /**
-     * Get SOAP Request Variables
-     * 
-     * Prepares request parameters to be
-     * sent in the SOAP Request Body.
-     * 
-     * @param mixed $requestObject
-     * @return array
-     */
-    protected function getSoapVariables($requestObject)
-    {
-        $objectName = lcfirst($requestObject->__toString());
-        $stdClass = new \stdClass();
-        $stdClass->$objectName = $requestObject;
-
-        return $this->objectToArray($stdClass);
-    }
-
-    /**
-     * Convert Objet to Array
-     * 
-     * This method omits null value properties
-     * 
-     * @param mixed $obj
-     * @return array
-     */
-    protected function objectToArray($obj)
-    {
-        $arrObj = is_object($obj) ? get_object_vars($obj) : $obj;
-        foreach ($arrObj as $key => $val) {
-            $val = (is_array($val) || is_object($val)) ? $this->objectToArray($val) : $val;
-            if ($val !== null) {
-                $arr[$key] = is_scalar($val) ? ((string) $val) : $val;
-            }
-        }
-        return $arr;
-    }
-
 }
