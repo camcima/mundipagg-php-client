@@ -3,11 +3,11 @@
 namespace MundiPagg\Entity;
 
 /**
- * ManageOrderResponse Entity
+ * ManageOrderResult Entity
  *
  * @author Carlos Cima
  */
-class ManageOrderResponse extends AbstractEntity
+class ManageOrderResult extends AbstractEntity
 {
     /**
      * Coleção de CreditCardTransactionResult que contém
@@ -49,6 +49,14 @@ class ManageOrderResponse extends AbstractEntity
     public $RequestKey;
 
     /**
+     * Identificação da Ordem na plataforma One. (GUID)
+     * 
+     * @var string $OrderKey
+     * @access public
+     */
+    public $OrderKey;
+
+    /**
      * Identificação do pedido enviado pela loja.
      * 
      * @var string 
@@ -83,5 +91,12 @@ class ManageOrderResponse extends AbstractEntity
      * @var string 
      */
     public $OrderStatusEnum;
+
+    /**
+     * Versão do serviço da MundiPagg utilizada na comunicação.
+     * 
+     * @var string 
+     */
+    public $Version;
 
 }

@@ -4,6 +4,7 @@ namespace MundiPagg;
 
 use Camcima\Soap\Client as SoapClient;
 use MundiPagg\Entity\CreateOrderRequest;
+use MundiPagg\Entity\ManageOrderRequest;
 
 /**
  * MundiPagg Client
@@ -72,6 +73,25 @@ class Client
         );
         $mappedResult = $this->getSoapClient()->mapSoapResult($soapResult, 'CreateOrderResult', $resultMap, '\MundiPagg\Entity\\');
         /* @var $mappedResult \MundiPagg\Entity\CreateOrderResult */
+        return $mappedResult;
+    }
+
+    /**
+     * Manage Order
+     * 
+     * @param \MundiPagg\Entity\ManageOrderRequest $manageOrderRequest
+     * @return \MundiPagg\Entity\ManageOrderResult
+     */
+    public function manageOrder(ManageOrderRequest $manageOrderRequest)
+    {
+        $requestParams = $this->getSoapClient()->getSoapVariables($manageOrderRequest, true, false);
+        $soapResult = $this->getSoapClient()->ManageOrder($requestParams);
+        $resultMap = array(
+            'array|BoletoTransactionResult' => '\MundiPagg\Entity\BoletoTransactionResult',
+            'array|CreditCardTransactionResult' => '\MundiPagg\Entity\CreditCardTransactionResult'
+        );
+        $mappedResult = $this->getSoapClient()->mapSoapResult($soapResult, 'ManageOrderResponse', $resultMap, '\MundiPagg\Entity\\');
+        /* @var $mappedResult \MundiPagg\Entity\ManageOrderResult */
         return $mappedResult;
     }
 
