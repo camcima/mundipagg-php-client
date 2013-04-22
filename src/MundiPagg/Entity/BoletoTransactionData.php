@@ -2,9 +2,15 @@
 
 namespace MundiPagg\Entity;
 
+/**
+ * BoletoTransactionData Entity
+ *
+ * @author Carlos Cima
+ */
 class BoletoTransactionData extends AbstractEntity
 {
     /**
+     * Valor total da transação em centavos.
      * 
      * @var int $AmountInCents
      * @access public
@@ -12,6 +18,7 @@ class BoletoTransactionData extends AbstractEntity
     public $AmountInCents;
 
     /**
+     * Valor pago em centavos.
      * 
      * @var int $AmountPaidInCents
      * @access public
@@ -19,6 +26,7 @@ class BoletoTransactionData extends AbstractEntity
     public $AmountPaidInCents;
 
     /**
+     * Número do banco.
      * 
      * @var string $BankNumber
      * @access public
@@ -26,6 +34,7 @@ class BoletoTransactionData extends AbstractEntity
     public $BankNumber;
 
     /**
+     * Linha digitável do boleto.
      * 
      * @var string $Barcode
      * @access public
@@ -33,13 +42,16 @@ class BoletoTransactionData extends AbstractEntity
     public $Barcode;
 
     /**
+     * Status do boleto dentro da plataforma One.
      * 
-     * @var BoletoTransactionStatusEnum $BoletoTransactionStatusEnum
+     * @see \MundiPagg\Entity\Enum\BoletoTransactionStatusEnum
+     * @var string $BoletoTransactionStatusEnum
      * @access public
      */
     public $BoletoTransactionStatusEnum;
 
     /**
+     * Url do boleto gerado.
      * 
      * @var string $BoletoUrl
      * @access public
@@ -47,13 +59,15 @@ class BoletoTransactionData extends AbstractEntity
     public $BoletoUrl;
 
     /**
+     * Data em que a transação foi criada.
      * 
-     * @var dateTime $CreateDate
+     * @var \DateTime $CreateDate
      * @access public
      */
     public $CreateDate;
 
     /**
+     * Código customizável para ser tratado pela loja
      * 
      * @var string $CustomStatus
      * @access public
@@ -61,13 +75,15 @@ class BoletoTransactionData extends AbstractEntity
     public $CustomStatus;
 
     /**
+     * Data de expiração do boleto.
      * 
-     * @var dateTime $ExpirationDate
+     * @var \DateTime $ExpirationDate
      * @access public
      */
     public $ExpirationDate;
 
     /**
+     * Número de identificação do boleto.
      * 
      * @var string $NossoNumero
      * @access public
@@ -75,48 +91,19 @@ class BoletoTransactionData extends AbstractEntity
     public $NossoNumero;
 
     /**
+     * Identificador da transação na plataforma One. (GUID)
      * 
-     * @var guid $TransactionKey
+     * @var string $TransactionKey
      * @access public
      */
     public $TransactionKey;
 
     /**
+     * Identificador da transação pela loja.
      * 
      * @var string $TransactionReference
      * @access public
      */
     public $TransactionReference;
 
-    /**
-     * 
-     * @param int $AmountInCents
-     * @param int $AmountPaidInCents
-     * @param string $BankNumber
-     * @param string $Barcode
-     * @param BoletoTransactionStatusEnum $BoletoTransactionStatusEnum
-     * @param string $BoletoUrl
-     * @param dateTime $CreateDate
-     * @param string $CustomStatus
-     * @param dateTime $ExpirationDate
-     * @param string $NossoNumero
-     * @param guid $TransactionKey
-     * @param string $TransactionReference
-     * @access public
-     */
-    public function __construct($AmountInCents, $AmountPaidInCents, $BankNumber, $Barcode, $BoletoTransactionStatusEnum, $BoletoUrl, $CreateDate, $CustomStatus, $ExpirationDate, $NossoNumero, $TransactionKey, $TransactionReference)
-    {
-        $this->AmountInCents = $AmountInCents;
-        $this->AmountPaidInCents = $AmountPaidInCents;
-        $this->BankNumber = $BankNumber;
-        $this->Barcode = $Barcode;
-        $this->BoletoTransactionStatusEnum = $BoletoTransactionStatusEnum;
-        $this->BoletoUrl = $BoletoUrl;
-        $this->CreateDate = $CreateDate;
-        $this->CustomStatus = $CustomStatus;
-        $this->ExpirationDate = $ExpirationDate;
-        $this->NossoNumero = $NossoNumero;
-        $this->TransactionKey = $TransactionKey;
-        $this->TransactionReference = $TransactionReference;
-    }
 }

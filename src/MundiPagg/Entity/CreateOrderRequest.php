@@ -3,7 +3,7 @@
 namespace MundiPagg\Entity;
 
 /**
- * CreateOrder Request Entity
+ * CreateOrderRequest Entity
  *
  * @author Carlos Cima
  */
@@ -34,7 +34,8 @@ class CreateOrderRequest extends AbstractEntity
      * 
      * Obrigatoriedade: Geração de boleto.
      * 
-     * @var \MundiPagg\Entity\BoletoTransaction 
+     * @see \MundiPagg\Entity\BoletoTransaction
+     * @var array 
      */
     public $BoletoTransactionCollection;
 
@@ -52,7 +53,8 @@ class CreateOrderRequest extends AbstractEntity
      * 
      * Obrigatoriedade: Autorização de Cartão de Crédito.
      * 
-     * @var \MundiPagg\Entity\CreditCardTransactionCollection 
+     * @see \MundiPagg\Entity\CreditCardTransaction
+     * @var array
      */
     public $CreditCardTransactionCollection;
 
@@ -257,4 +259,5 @@ class CreateOrderRequest extends AbstractEntity
         $this->RequestKey = $RequestKey;
         return $this;
     }
+
 }

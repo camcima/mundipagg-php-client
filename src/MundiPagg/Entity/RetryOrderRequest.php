@@ -2,6 +2,11 @@
 
 namespace MundiPagg\Entity;
 
+/**
+ * RetryOrderRequest Entity
+ *
+ * @author Carlos Cima
+ */
 class RetryOrderRequest extends AbstractEntity
 {
     /**

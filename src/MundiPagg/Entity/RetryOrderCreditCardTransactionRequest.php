@@ -2,6 +2,11 @@
 
 namespace MundiPagg\Entity;
 
+/**
+ * RetryOrderCreditCardTransactionRequest Entity
+ *
+ * @author Carlos Cima
+ */
 class RetryOrderCreditCardTransactionRequest extends AbstractEntity
 {
     /**

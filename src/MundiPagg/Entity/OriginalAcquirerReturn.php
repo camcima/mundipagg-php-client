@@ -2,22 +2,20 @@
 
 namespace MundiPagg\Entity;
 
+/**
+ * OriginalAcquirerReturn Entity
+ *
+ * @author Carlos Cima
+ */
 class OriginalAcquirerReturn extends AbstractEntity
 {
     /**
+     * Informações do retorno da adquirente.
      * 
-     * @var OriginalAcquirerReturnItem $OriginalAcquirerReturnItem
+     * @see \MundiPagg\Entity\OriginalAcquirerReturnItem
+     * @var array $OriginalAcquirerReturnItem
      * @access public
      */
     public $OriginalAcquirerReturnItem;
 
-    /**
-     * 
-     * @param OriginalAcquirerReturnItem $OriginalAcquirerReturnItem
-     * @access public
-     */
-    public function __construct($OriginalAcquirerReturnItem)
-    {
-        $this->OriginalAcquirerReturnItem = $OriginalAcquirerReturnItem;
-    }
 }

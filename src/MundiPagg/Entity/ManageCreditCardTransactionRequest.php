@@ -2,9 +2,17 @@
 
 namespace MundiPagg\Entity;
 
+/**
+ * ManageCreditCardTransactionRequest Entity
+ *
+ * @author Carlos Cima
+ */
 class ManageCreditCardTransactionRequest extends AbstractEntity
 {
     /**
+     * Valor total da transação em centavos.
+     * 
+     * Obrigatoriedade: Não Obrigatório.
      * 
      * @var int $AmountInCents
      * @access public
@@ -12,30 +20,23 @@ class ManageCreditCardTransactionRequest extends AbstractEntity
     public $AmountInCents;
 
     /**
+     * Identificação da transação na plataforma One. (GUID)
      * 
-     * @var guid $TransactionKey
+     * Obrigatoriedade: Todas operações.
+     * 
+     * @var string $TransactionKey
      * @access public
      */
     public $TransactionKey;
 
     /**
+     * Identificação da transação pela loja.
+     * 
+     * Obrigatoriedade: Não Obrigatório.
      * 
      * @var string $TransactionReference
      * @access public
      */
     public $TransactionReference;
 
-    /**
-     * 
-     * @param int $AmountInCents
-     * @param guid $TransactionKey
-     * @param string $TransactionReference
-     * @access public
-     */
-    public function __construct($AmountInCents, $TransactionKey, $TransactionReference)
-    {
-        $this->AmountInCents = $AmountInCents;
-        $this->TransactionKey = $TransactionKey;
-        $this->TransactionReference = $TransactionReference;
-    }
 }

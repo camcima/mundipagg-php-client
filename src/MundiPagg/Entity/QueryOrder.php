@@ -2,6 +2,11 @@
 
 namespace MundiPagg\Entity;
 
+/**
+ * QueryOrder Entity
+ *
+ * @author Carlos Cima
+ */
 class QueryOrder extends AbstractEntity
 {
     /**

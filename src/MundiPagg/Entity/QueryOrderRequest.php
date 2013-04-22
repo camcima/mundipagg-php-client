@@ -2,23 +2,37 @@
 
 namespace MundiPagg\Entity;
 
+/**
+ * QueryOrderRequest Entity
+ *
+ * @author Carlos Cima
+ */
 class QueryOrderRequest extends AbstractEntity
 {
     /**
+     * Identificação da loja na plataforma One. (GUID)
      * 
-     * @var guid $MerchantKey
+     * Obrigatoriedade: Todas operações.
+     * 
+     * @var string $MerchantKey
      * @access public
      */
     public $MerchantKey;
 
     /**
+     * Identificação da Ordem na plataforma One. (GUID)
      * 
-     * @var guid $OrderKey
+     * Obrigatoriedade: Não Obrigatório.
+     * 
+     * @var string $OrderKey
      * @access public
      */
     public $OrderKey;
 
     /**
+     * Identificação da ordem enviada pelo lojista.
+     * 
+     * Obrigatoriedade: Não Obrigatório.
      * 
      * @var string $OrderReference
      * @access public
@@ -26,25 +40,22 @@ class QueryOrderRequest extends AbstractEntity
     public $OrderReference;
 
     /**
+     * Identificação da requisição na plataforma One. (GUID)
      * 
-     * @var guid $RequestKey
+     * Obrigatoriedade: Não Obrigatório.
+     * 
+     * @var string $RequestKey
      * @access public
      */
     public $RequestKey;
 
     /**
+     * Versão do serviço da MundiPagg utilizada na comunicação.
      * 
-     * @param guid $MerchantKey
-     * @param guid $OrderKey
-     * @param string $OrderReference
-     * @param guid $RequestKey
-     * @access public
+     * Obrigatoriedade: Não Obrigatório.
+     * 
+     * @var string 
      */
-    public function __construct($MerchantKey, $OrderKey, $OrderReference, $RequestKey)
-    {
-        $this->MerchantKey = $MerchantKey;
-        $this->OrderKey = $OrderKey;
-        $this->OrderReference = $OrderReference;
-        $this->RequestKey = $RequestKey;
-    }
+    public $Version;
+
 }

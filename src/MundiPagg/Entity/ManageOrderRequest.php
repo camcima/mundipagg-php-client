@@ -2,37 +2,60 @@
 
 namespace MundiPagg\Entity;
 
+/**
+ * ManageOrderRequest Entity
+ *
+ * @author Carlos Cima
+ */
 class ManageOrderRequest extends AbstractEntity
 {
     /**
+     * Coleção de CreditCardTransactionRequest que contém
+     * os resultados das operações que foram solicitadas no Request.
      * 
+     * Obrigatoriedade: Obrigatório em casos de captura e cancelamentos de transações específicas dentro de um pedido.
+     * 
+     * @see \MundiPagg\Entity\ManageCreditCardTransactionRequest
      * @var array $ManageCreditCardTransactionCollection
      * @access public
      */
     public $ManageCreditCardTransactionCollection;
 
     /**
+     * Tipo de operação.
      * 
-     * @var ManageOrderOperationEnum $ManageOrderOperationEnum
+     * Obrigatoriedade: Todas operações.
+     * 
+     * @see \MundiPagg\Entity\Enum\ManageOrderOperationEnum
+     * @var string $ManageOrderOperationEnum
      * @access public
      */
     public $ManageOrderOperationEnum;
 
     /**
+     * Identificação da loja na plataforma One. (GUID)
      * 
-     * @var guid $MerchantKey
+     * Obrigatoriedade: Todas operações.
+     * 
+     * @var string $MerchantKey
      * @access public
      */
     public $MerchantKey;
 
     /**
+     * Identificação da Ordem na plataforma One. (GUID)
      * 
-     * @var guid $OrderKey
+     * Obrigatoriedade: Todas operações.
+     * 
+     * @var string $OrderKey
      * @access public
      */
     public $OrderKey;
 
     /**
+     * Identificação da ordem enviada pelo lojista.
+     * 
+     * Obrigatoriedade: Não Obrigatório.
      * 
      * @var string $OrderReference
      * @access public
@@ -40,29 +63,13 @@ class ManageOrderRequest extends AbstractEntity
     public $OrderReference;
 
     /**
+     * Identificação da requisição na plataforma One. (GUID)
      * 
-     * @var guid $RequestKey
+     * Obrigatoriedade: Não Obrigatório.
+     * 
+     * @var string $RequestKey
      * @access public
      */
     public $RequestKey;
 
-    /**
-     * 
-     * @param array $ManageCreditCardTransactionCollection
-     * @param ManageOrderOperationEnum $ManageOrderOperationEnum
-     * @param guid $MerchantKey
-     * @param guid $OrderKey
-     * @param string $OrderReference
-     * @param guid $RequestKey
-     * @access public
-     */
-    public function __construct($ManageCreditCardTransactionCollection, $ManageOrderOperationEnum, $MerchantKey, $OrderKey, $OrderReference, $RequestKey)
-    {
-        $this->ManageCreditCardTransactionCollection = $ManageCreditCardTransactionCollection;
-        $this->ManageOrderOperationEnum = $ManageOrderOperationEnum;
-        $this->MerchantKey = $MerchantKey;
-        $this->OrderKey = $OrderKey;
-        $this->OrderReference = $OrderReference;
-        $this->RequestKey = $RequestKey;
-    }
 }

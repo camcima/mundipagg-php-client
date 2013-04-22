@@ -2,6 +2,11 @@
 
 namespace MundiPagg\Entity;
 
+/**
+ * MundiPaggSuggestion Entity
+ *
+ * @author Carlos Cima
+ */
 class MundiPaggSuggestion extends AbstractEntity
 {
     /**

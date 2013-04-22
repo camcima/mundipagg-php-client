@@ -2,6 +2,11 @@
 
 namespace MundiPagg\Entity;
 
+/**
+ * CreditCardData Entity
+ *
+ * @author Carlos Cima
+ */
 class CreditCardData extends AbstractEntity
 {
     /**

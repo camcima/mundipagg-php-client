@@ -2,6 +2,11 @@
 
 namespace MundiPagg\Entity;
 
+/**
+ * GetInstantBuyDataResponse Entity
+ *
+ * @author Carlos Cima
+ */
 class GetInstantBuyDataResponse extends AbstractEntity
 {
     /**

@@ -2,16 +2,28 @@
 
 namespace MundiPagg\Entity;
 
+/**
+ * BuyerAddress Entity
+ *
+ * @author Carlos Cima
+ */
 class BuyerAddress extends AbstractEntity
 {
     /**
+     * Tipo de Endereço.
      * 
-     * @var AddressTypeEnum $AddressTypeEnum
+     * Obrigatoriedade: Não Obrigatório.
+     * 
+     * @see \MundiPagg\Entity\Enum\AddressTypeEnum
+     * @var string $AddressTypeEnum
      * @access public
      */
     public $AddressTypeEnum;
 
     /**
+     * Cidade
+     * 
+     * Obrigatoriedade: Obrigatório para gestão de fraude.
      * 
      * @var string $City
      * @access public
@@ -19,6 +31,9 @@ class BuyerAddress extends AbstractEntity
     public $City;
 
     /**
+     * Complemento
+     * 
+     * Obrigatoriedade: Não Obrigatório.
      * 
      * @var string $Complement
      * @access public
@@ -26,13 +41,20 @@ class BuyerAddress extends AbstractEntity
     public $Complement;
 
     /**
+     * País
      * 
-     * @var CountryEnum $CountryEnum
+     * Obrigatoriedade: Não Obrigatório.
+     * 
+     * @see \MundiPagg\Entity\Enum\CountryEnum
+     * @var string $CountryEnum
      * @access public
      */
     public $CountryEnum;
 
     /**
+     * Bairro
+     * 
+     * Obrigatoriedade: Obrigatório para gestão de fraude.
      * 
      * @var string $District
      * @access public
@@ -40,6 +62,9 @@ class BuyerAddress extends AbstractEntity
     public $District;
 
     /**
+     * Número
+     * 
+     * Obrigatoriedade: Obrigatório para gestão de fraude.
      * 
      * @var string $Number
      * @access public
@@ -47,6 +72,9 @@ class BuyerAddress extends AbstractEntity
     public $Number;
 
     /**
+     * Estado
+     * 
+     * Obrigatoriedade: Obrigatório para gestão de fraude.
      * 
      * @var string $State
      * @access public
@@ -54,6 +82,9 @@ class BuyerAddress extends AbstractEntity
     public $State;
 
     /**
+     * Rua
+     * 
+     * Obrigatoriedade: Obrigatório para gestão de fraude.
      * 
      * @var string $Street
      * @access public
@@ -61,35 +92,13 @@ class BuyerAddress extends AbstractEntity
     public $Street;
 
     /**
+     * Código Postal do endereço (CEP).
+     * 
+     * Obrigatoriedade: Obrigatório para gestão de fraude.
      * 
      * @var string $ZipCode
      * @access public
      */
     public $ZipCode;
 
-    /**
-     * 
-     * @param AddressTypeEnum $AddressTypeEnum
-     * @param string $City
-     * @param string $Complement
-     * @param CountryEnum $CountryEnum
-     * @param string $District
-     * @param string $Number
-     * @param string $State
-     * @param string $Street
-     * @param string $ZipCode
-     * @access public
-     */
-    public function __construct($AddressTypeEnum, $City, $Complement, $CountryEnum, $District, $Number, $State, $Street, $ZipCode)
-    {
-        $this->AddressTypeEnum = $AddressTypeEnum;
-        $this->City = $City;
-        $this->Complement = $Complement;
-        $this->CountryEnum = $CountryEnum;
-        $this->District = $District;
-        $this->Number = $Number;
-        $this->State = $State;
-        $this->Street = $Street;
-        $this->ZipCode = $ZipCode;
-    }
 }

@@ -2,9 +2,15 @@
 
 namespace MundiPagg\Entity;
 
+/**
+ * ErrorItem Entity
+ *
+ * @author Carlos Cima
+ */
 class ErrorItem extends AbstractEntity
 {
     /**
+     * Descrição do erro.
      * 
      * @var string $Description
      * @access public
@@ -12,6 +18,10 @@ class ErrorItem extends AbstractEntity
     public $Description;
 
     /**
+     * Código Identificador do erro.
+     * 
+     * 400 - Dado inválido informado para o contrato do serviço.
+     * 500 - Erro inesperado.
      * 
      * @var int $ErrorCode
      * @access public
@@ -19,6 +29,7 @@ class ErrorItem extends AbstractEntity
     public $ErrorCode;
 
     /**
+     * Nome do campo que apresenta um dado inválido.
      * 
      * @var string $ErrorField
      * @access public
@@ -26,25 +37,12 @@ class ErrorItem extends AbstractEntity
     public $ErrorField;
 
     /**
+     * Identifica o grau de severidade do problema.
      * 
-     * @var SeverityCodeEnum $SeverityCodeEnum
+     * @see \MundiPagg\Entity\Enum\SeverityCodeEnum
+     * @var string $SeverityCodeEnum
      * @access public
      */
     public $SeverityCodeEnum;
 
-    /**
-     * 
-     * @param string $Description
-     * @param int $ErrorCode
-     * @param string $ErrorField
-     * @param SeverityCodeEnum $SeverityCodeEnum
-     * @access public
-     */
-    public function __construct($Description, $ErrorCode, $ErrorField, $SeverityCodeEnum)
-    {
-        $this->Description = $Description;
-        $this->ErrorCode = $ErrorCode;
-        $this->ErrorField = $ErrorField;
-        $this->SeverityCodeEnum = $SeverityCodeEnum;
-    }
 }

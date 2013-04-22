@@ -2,6 +2,11 @@
 
 namespace MundiPagg\Entity;
 
+/**
+ * ManageOrder Entity
+ *
+ * @author Carlos Cima
+ */
 class ManageOrder extends AbstractEntity
 {
     /**
@@ -11,13 +16,4 @@ class ManageOrder extends AbstractEntity
      */
     public $manageOrderRequest;
 
-    /**
-     * 
-     * @param ManageOrderRequest $manageOrderRequest
-     * @access public
-     */
-    public function __construct($manageOrderRequest)
-    {
-        $this->manageOrderRequest = $manageOrderRequest;
-    }
 }

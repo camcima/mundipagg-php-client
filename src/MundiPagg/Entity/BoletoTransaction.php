@@ -2,9 +2,17 @@
 
 namespace MundiPagg\Entity;
 
+/**
+ * BoletoTransaction Entity
+ *
+ * @author Carlos Cima
+ */
 class BoletoTransaction extends AbstractEntity
 {
     /**
+     * Valor do boleto em centavos.
+     * 
+     * Obrigatoriedade: Obrigatório.
      * 
      * @var int $AmountInCents
      * @access public
@@ -12,6 +20,9 @@ class BoletoTransaction extends AbstractEntity
     public $AmountInCents;
 
     /**
+     * Número do banco.
+     * 
+     * Obrigatoriedade: Não Obrigatório.
      * 
      * @var string $BankNumber
      * @access public
@@ -19,6 +30,9 @@ class BoletoTransaction extends AbstractEntity
     public $BankNumber;
 
     /**
+     * Dias que serão adicionados a data atual até o vencimento.
+     * 
+     * Obrigatoriedade: Não Obrigatório.
      * 
      * @var int $DaysToAddInBoletoExpirationDate
      * @access public
@@ -26,6 +40,9 @@ class BoletoTransaction extends AbstractEntity
     public $DaysToAddInBoletoExpirationDate;
 
     /**
+     * Instrução que irá aparecer no corpo do boleto.
+     * 
+     * Obrigatoriedade: Não Obrigatório.
      * 
      * @var string $Instructions
      * @access public
@@ -33,6 +50,9 @@ class BoletoTransaction extends AbstractEntity
     public $Instructions;
 
     /**
+     * Número de identificação do boleto.
+     * 
+     * Obrigatoriedade: Obrigatório.
      * 
      * @var string $NossoNumero
      * @access public
@@ -40,29 +60,13 @@ class BoletoTransaction extends AbstractEntity
     public $NossoNumero;
 
     /**
+     * Identificador da transação pela loja.
+     * 
+     * Obrigatoriedade: Obrigatório.
      * 
      * @var string $TransactionReference
      * @access public
      */
     public $TransactionReference;
 
-    /**
-     * 
-     * @param int $AmountInCents
-     * @param string $BankNumber
-     * @param int $DaysToAddInBoletoExpirationDate
-     * @param string $Instructions
-     * @param string $NossoNumero
-     * @param string $TransactionReference
-     * @access public
-     */
-    public function __construct($AmountInCents, $BankNumber, $DaysToAddInBoletoExpirationDate, $Instructions, $NossoNumero, $TransactionReference)
-    {
-        $this->AmountInCents = $AmountInCents;
-        $this->BankNumber = $BankNumber;
-        $this->DaysToAddInBoletoExpirationDate = $DaysToAddInBoletoExpirationDate;
-        $this->Instructions = $Instructions;
-        $this->NossoNumero = $NossoNumero;
-        $this->TransactionReference = $TransactionReference;
-    }
 }

@@ -2,9 +2,17 @@
 
 namespace MundiPagg\Entity;
 
+/**
+ * ShoppingCartItem Entity
+ *
+ * @author Carlos Cima
+ */
 class ShoppingCartItem extends AbstractEntity
 {
     /**
+     * Descrição
+     * 
+     * Obrigatoriedade: Não Obrigatório.
      * 
      * @var string $Description
      * @access public
@@ -12,6 +20,9 @@ class ShoppingCartItem extends AbstractEntity
     public $Description;
 
     /**
+     * Identificação do item do carrinho na plataforma da loja.
+     * 
+     * Obrigatoriedade: Obrigatório para gestão de fraude.
      * 
      * @var string $ItemReference
      * @access public
@@ -19,6 +30,9 @@ class ShoppingCartItem extends AbstractEntity
     public $ItemReference;
 
     /**
+     * Nome
+     * 
+     * Obrigatoriedade: Obrigatório para gestão de fraude.
      * 
      * @var string $Name
      * @access public
@@ -26,6 +40,9 @@ class ShoppingCartItem extends AbstractEntity
     public $Name;
 
     /**
+     * Quantidade do item a ser comprado.
+     * 
+     * Obrigatoriedade: Obrigatório para gestão de fraude.
      * 
      * @var int $Quantity
      * @access public
@@ -33,6 +50,9 @@ class ShoppingCartItem extends AbstractEntity
     public $Quantity;
 
     /**
+     * Valor total da compra
+     * 
+     * Obrigatoriedade: Não Obrigatório.
      * 
      * @var int $TotalCostInCents
      * @access public
@@ -40,29 +60,13 @@ class ShoppingCartItem extends AbstractEntity
     public $TotalCostInCents;
 
     /**
+     * Custo Unitário
+     * 
+     * Obrigatoriedade: Obrigatório para gestão de fraude.
      * 
      * @var int $UnitCostInCents
      * @access public
      */
     public $UnitCostInCents;
 
-    /**
-     * 
-     * @param string $Description
-     * @param string $ItemReference
-     * @param string $Name
-     * @param int $Quantity
-     * @param int $TotalCostInCents
-     * @param int $UnitCostInCents
-     * @access public
-     */
-    public function __construct($Description, $ItemReference, $Name, $Quantity, $TotalCostInCents, $UnitCostInCents)
-    {
-        $this->Description = $Description;
-        $this->ItemReference = $ItemReference;
-        $this->Name = $Name;
-        $this->Quantity = $Quantity;
-        $this->TotalCostInCents = $TotalCostInCents;
-        $this->UnitCostInCents = $UnitCostInCents;
-    }
 }

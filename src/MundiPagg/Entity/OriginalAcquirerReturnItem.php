@@ -2,9 +2,15 @@
 
 namespace MundiPagg\Entity;
 
+/**
+ * OriginalAcquirerReturnItem Entity
+ *
+ * @author Carlos Cima
+ */
 class OriginalAcquirerReturnItem extends AbstractEntity
 {
     /**
+     * Chave de identificação da adquirente.
      * 
      * @var string $Key
      * @access public
@@ -12,21 +18,11 @@ class OriginalAcquirerReturnItem extends AbstractEntity
     public $Key;
 
     /**
+     * Valor recebido pela adquirente de acordo com a chave.
      * 
      * @var string $Value
      * @access public
      */
     public $Value;
 
-    /**
-     * 
-     * @param string $Key
-     * @param string $Value
-     * @access public
-     */
-    public function __construct($Key, $Value)
-    {
-        $this->Key = $Key;
-        $this->Value = $Value;
-    }
 }

@@ -2,9 +2,15 @@
 
 namespace MundiPagg\Entity;
 
+/**
+ * CreditCardTransactionData Entity
+ *
+ * @author Carlos Cima
+ */
 class CreditCardTransactionData extends AbstractEntity
 {
     /**
+     * Código de autorização da transação enviado pela adquirente.
      * 
      * @var string $AcquirerAuthorizationCode
      * @access public
@@ -12,6 +18,7 @@ class CreditCardTransactionData extends AbstractEntity
     public $AcquirerAuthorizationCode;
 
     /**
+     * Nome da adquirente em que a transação foi realizado.
      * 
      * @var string $AcquirerName
      * @access public
@@ -19,6 +26,7 @@ class CreditCardTransactionData extends AbstractEntity
     public $AcquirerName;
 
     /**
+     * Valor da transação em centavos.
      * 
      * @var int $AmountInCents
      * @access public
@@ -26,6 +34,7 @@ class CreditCardTransactionData extends AbstractEntity
     public $AmountInCents;
 
     /**
+     * Indica o valor autorizado em centavos
      * 
      * @var int $AuthorizedAmountInCents
      * @access public
@@ -33,6 +42,7 @@ class CreditCardTransactionData extends AbstractEntity
     public $AuthorizedAmountInCents;
 
     /**
+     * Indica o valor capturado em centavos.
      * 
      * @var int $CapturedAmountInCents
      * @access public
@@ -40,20 +50,24 @@ class CreditCardTransactionData extends AbstractEntity
     public $CapturedAmountInCents;
 
     /**
+     * Data em que a transação foi criada.
      * 
-     * @var dateTime $CreateDate
+     * @var \DateTime $CreateDate
      * @access public
      */
     public $CreateDate;
 
     /**
+     * Bandeira do cartão utilizado na transação.
      * 
-     * @var CreditCardBrandEnum $CreditCardBrandEnum
+     * @see \MundiPagg\Entity\Enum\CreditCardBrandEnum
+     * @var string $CreditCardBrandEnum
      * @access public
      */
     public $CreditCardBrandEnum;
 
     /**
+     * Número do cartão de crédito utilizado na transação.
      * 
      * @var string $CreditCardNumber
      * @access public
@@ -61,13 +75,16 @@ class CreditCardTransactionData extends AbstractEntity
     public $CreditCardNumber;
 
     /**
+     * Status da transação de cartão de crédito na plataforma One.
      * 
-     * @var CreditCardTransactionStatusEnum $CreditCardTransactionStatusEnum
+     * @see \MundiPagg\Entity\Enum\CreditCardTransactionStatusEnum
+     * @var string $CreditCardTransactionStatusEnum
      * @access public
      */
     public $CreditCardTransactionStatusEnum;
 
     /**
+     * Código customizável para ser tratado pela loja.
      * 
      * @var string $CustomStatus
      * @access public
@@ -75,13 +92,15 @@ class CreditCardTransactionData extends AbstractEntity
     public $CustomStatus;
 
     /**
+     * Data que a transação será executada.
      * 
-     * @var dateTime $DueDate
+     * @var \DateTime $DueDate
      * @access public
      */
     public $DueDate;
 
     /**
+     * Número de parcelas da transação.
      * 
      * @var int $InstallmentCount
      * @access public
@@ -89,13 +108,15 @@ class CreditCardTransactionData extends AbstractEntity
     public $InstallmentCount;
 
     /**
+     * Identificação do Buyer para comprar com InstantBuy. (GUID)
      * 
-     * @var guid $InstantBuyKey
+     * @var string $InstantBuyKey
      * @access public
      */
     public $InstantBuyKey;
 
     /**
+     * Informa se a transação é ou não uma recorrência.
      * 
      * @var boolean $IsReccurency
      * @access public
@@ -103,6 +124,7 @@ class CreditCardTransactionData extends AbstractEntity
     public $IsReccurency;
 
     /**
+     * Indica o valor estornado em centavos.
      * 
      * @var int $RefundedAmountInCents
      * @access public
@@ -110,6 +132,7 @@ class CreditCardTransactionData extends AbstractEntity
     public $RefundedAmountInCents;
 
     /**
+     * Identificação da transação na adquirente Cielo (TID).
      * 
      * @var string $TransactionIdentifier
      * @access public
@@ -117,13 +140,15 @@ class CreditCardTransactionData extends AbstractEntity
     public $TransactionIdentifier;
 
     /**
+     * Identificador da transação na plataforma One. (GUID)
      * 
-     * @var guid $TransactionKey
+     * @var string $TransactionKey
      * @access public
      */
     public $TransactionKey;
 
     /**
+     * Identificador da transação loja.
      * 
      * @var string $TransactionReference
      * @access public
@@ -131,6 +156,8 @@ class CreditCardTransactionData extends AbstractEntity
     public $TransactionReference;
 
     /**
+     * Número Sequencial Único. (NSU)
+     * Este campo é utilizado para localizar a transação na adquirente.
      * 
      * @var string $UniqueSequentialNumber
      * @access public
@@ -138,57 +165,11 @@ class CreditCardTransactionData extends AbstractEntity
     public $UniqueSequentialNumber;
 
     /**
+     * Indica o valor cancelado em centavos.
      * 
      * @var int $VoidedAmountInCents
      * @access public
      */
     public $VoidedAmountInCents;
 
-    /**
-     * 
-     * @param string $AcquirerAuthorizationCode
-     * @param string $AcquirerName
-     * @param int $AmountInCents
-     * @param int $AuthorizedAmountInCents
-     * @param int $CapturedAmountInCents
-     * @param dateTime $CreateDate
-     * @param CreditCardBrandEnum $CreditCardBrandEnum
-     * @param string $CreditCardNumber
-     * @param CreditCardTransactionStatusEnum $CreditCardTransactionStatusEnum
-     * @param string $CustomStatus
-     * @param dateTime $DueDate
-     * @param int $InstallmentCount
-     * @param guid $InstantBuyKey
-     * @param boolean $IsReccurency
-     * @param int $RefundedAmountInCents
-     * @param string $TransactionIdentifier
-     * @param guid $TransactionKey
-     * @param string $TransactionReference
-     * @param string $UniqueSequentialNumber
-     * @param int $VoidedAmountInCents
-     * @access public
-     */
-    public function __construct($AcquirerAuthorizationCode, $AcquirerName, $AmountInCents, $AuthorizedAmountInCents, $CapturedAmountInCents, $CreateDate, $CreditCardBrandEnum, $CreditCardNumber, $CreditCardTransactionStatusEnum, $CustomStatus, $DueDate, $InstallmentCount, $InstantBuyKey, $IsReccurency, $RefundedAmountInCents, $TransactionIdentifier, $TransactionKey, $TransactionReference, $UniqueSequentialNumber, $VoidedAmountInCents)
-    {
-        $this->AcquirerAuthorizationCode = $AcquirerAuthorizationCode;
-        $this->AcquirerName = $AcquirerName;
-        $this->AmountInCents = $AmountInCents;
-        $this->AuthorizedAmountInCents = $AuthorizedAmountInCents;
-        $this->CapturedAmountInCents = $CapturedAmountInCents;
-        $this->CreateDate = $CreateDate;
-        $this->CreditCardBrandEnum = $CreditCardBrandEnum;
-        $this->CreditCardNumber = $CreditCardNumber;
-        $this->CreditCardTransactionStatusEnum = $CreditCardTransactionStatusEnum;
-        $this->CustomStatus = $CustomStatus;
-        $this->DueDate = $DueDate;
-        $this->InstallmentCount = $InstallmentCount;
-        $this->InstantBuyKey = $InstantBuyKey;
-        $this->IsReccurency = $IsReccurency;
-        $this->RefundedAmountInCents = $RefundedAmountInCents;
-        $this->TransactionIdentifier = $TransactionIdentifier;
-        $this->TransactionKey = $TransactionKey;
-        $this->TransactionReference = $TransactionReference;
-        $this->UniqueSequentialNumber = $UniqueSequentialNumber;
-        $this->VoidedAmountInCents = $VoidedAmountInCents;
-    }
 }

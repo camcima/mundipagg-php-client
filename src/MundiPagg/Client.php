@@ -42,6 +42,8 @@ class Client
         $mergedOptions = array_merge($defaultOptions, $options);
 
         $this->soapClient = new SoapClient($wsdlUrl, $mergedOptions);
+        $this->soapClient->setKeepNullProperties(false);
+        $this->soapClient->setLowerCaseFirst(true);
     }
 
     /**

@@ -18,7 +18,7 @@ use MundiPagg\Entity\Enum\EmailUpdateToBuyerEnum;
  */
 class ClientTest extends \PHPUnit_Framework_TestCase
 {
-    const FIXTURE_MERCHANT_KEY = '2233CB49-1BD4-421A-B988-FB939513C562';
+    const FIXTURE_MERCHANT_KEY = 'FB76E29D-427F-45B2-AD49-F99715EF46B5';
 
     /**
      * MundiPagg Client
@@ -30,7 +30,9 @@ class ClientTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->client = new Client(self::FIXTURE_MERCHANT_KEY, Client::WSDL_STAGING_URL);
+        $this->client = new Client(self::FIXTURE_MERCHANT_KEY, Client::WSDL_PRODUCTION_URL);
+        $this->client->getSoapClient()->setDebug(true);
+        $this->client->getSoapClient()->setDebugLogFilePath(__DIR__ . '/../../../log/debug.log');
     }
 
     public function testGetSoapClient()
