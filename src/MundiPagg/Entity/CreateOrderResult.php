@@ -3,17 +3,16 @@
 namespace MundiPagg\Entity;
 
 /**
- * CreateOrderResponse Entity
+ * CreateOrderResult Entity
  *
  * @author Carlos Cima
  */
-class CreateOrderResponse extends AbstractEntity
+class CreateOrderResult extends AbstractEntity
 {
     /**
      * Coleção de BoletosTransactionResult que contém os resultados dos boletos que foram solicitados no Request.
      * 
-     * @see \MundiPagg\Entity\BoletoTransactionResult
-     * @var array 
+     * @var \MundiPagg\Entity\BoletoTransactionResultCollection 
      */
     public $BoletoTransactionResultCollection;
 
@@ -27,8 +26,7 @@ class CreateOrderResponse extends AbstractEntity
     /**
      * Coleção de CreditCardTransactionResult que contém os resultados das operações que foram solicitadas no Request.
      * 
-     * @see \MundiPagg\Entity\CreditCardTransactionResult
-     * @var array 
+     * @var \MundiPagg\Entity\CreditCardTransactionResultCollection 
      */
     public $CreditCardTransactionResultCollection;
 
@@ -44,7 +42,7 @@ class CreateOrderResponse extends AbstractEntity
      * 
      * @var int 
      */
-    public $MundiPaggTimeInMilliSeconds;
+    public $MundiPaggTimeInMilliseconds;
 
     /**
      * Identificação da Ordem na plataforma One. (GUID)
@@ -95,5 +93,12 @@ class CreateOrderResponse extends AbstractEntity
      * @var \MundiPagg\Entity\ErrorReport 
      */
     public $ErrorReport;
+
+    /**
+     * Para uso futuro.
+     * 
+     * @var mixed
+     */
+    public $MundiPaggSuggestion;
 
 }

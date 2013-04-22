@@ -65,12 +65,42 @@ class ClientTest extends \PHPUnit_Framework_TestCase
             ->setPaymentMethodCode(1)
             ->setCreditCardOperationEnum(CreditCardOperationEnum::AUTHORIZE_ONLY);
 
+        $creditCardTransaction2 = new CreditCardTransaction();
+        $creditCardTransaction2
+            ->setAmountInCents(100)
+            ->setCreditCardNumber('5212701315496781')
+            ->setInstallmentCount(0)
+            ->setHolderName('Carlos Teste')
+            ->setSecurityCode('081')
+            ->setExpMonth('09')
+            ->setExpYear('14')
+            ->setCreditCardBrandEnum(CreditCardBrandEnum::MASTERCARD)
+            ->setPaymentMethodCode(1)
+            ->setCreditCardOperationEnum(CreditCardOperationEnum::AUTHORIZE_ONLY);
+
         $createOrderRequest
             ->getCreditCardTransactionCollection()
-            ->addCreditCardTransaction($creditCardTransaction);
+            ->addCreditCardTransaction($creditCardTransaction)
+            ->addCreditCardTransaction($creditCardTransaction2);
 
 
-        $return = $this->client->createOrder($createOrderRequest);
-        var_dump($return);
+        $createOrderResult = $this->client->createOrder($createOrderRequest);
+        /* @var $createOrderResult \MundiPagg\Entity\CreateOrderResult */
+        $this->assertInstanceOf('\MundiPagg\Entity\CreateOrderResult', $createOrderResult);
+        $this->assertInstanceOf('\MundiPagg\Entity\BoletoTransactionResultCollection', $createOrderResult->BoletoTransactionResultCollection);
+        $this->assertInstanceOf('\MundiPagg\Entity\CreditCardTransactionResultCollection', $createOrderResult->CreditCardTransactionResultCollection);
+        $creditCardTransactionResultCollection = $createOrderResult->CreditCardTransactionResultCollection;
+        /* @var $creditCardTransactionResultCollection \MundiPagg\Entity\CreditCardTransactionResultCollection */
+        $creditCardTransactionResult = $creditCardTransactionResultCollection->CreditCardTransactionResult;
+        $this->assertInternalType('array', $creditCardTransactionResult);
+        $this->assertCount(2, $creditCardTransactionResult);
+        $firstTransactionResult = reset($creditCardTransactionResult);
+        /* @var $firstTransactionResult \MundiPagg\Entity\CreditCardTransactionResult */
+        $this->assertInstanceOf('\MundiPagg\Entity\CreditCardTransactionResult', $firstTransactionResult);
+        $this->assertEquals('521270****6781', $firstTransactionResult->CreditCardNumber);
+        $this->assertEquals('AuthOnly', $firstTransactionResult->CreditCardOperationEnum);
+        $this->assertEquals('AuthorizedPendingCapture', $firstTransactionResult->CreditCardTransactionStatusEnum);
+        $this->assertTrue($firstTransactionResult->Success);
     }
+
 }

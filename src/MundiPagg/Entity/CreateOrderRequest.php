@@ -34,8 +34,7 @@ class CreateOrderRequest extends AbstractEntity
      * 
      * Obrigatoriedade: Geração de boleto.
      * 
-     * @see \MundiPagg\Entity\BoletoTransaction
-     * @var array 
+     * @var \MundiPagg\Entity\BoletoTransactionCollection
      */
     public $BoletoTransactionCollection;
 
@@ -53,8 +52,7 @@ class CreateOrderRequest extends AbstractEntity
      * 
      * Obrigatoriedade: Autorização de Cartão de Crédito.
      * 
-     * @see \MundiPagg\Entity\CreditCardTransaction
-     * @var array
+     * @var \MundiPagg\Entity\CreditCardTransactionCollection
      */
     public $CreditCardTransactionCollection;
 
@@ -63,8 +61,8 @@ class CreateOrderRequest extends AbstractEntity
      * 
      * Obrigatoriedade: Captura Automática.
      * 
-     * @var string 
      * @see \MundiPagg\Entity\Enum\CurrencyIsoEnum
+     * @var string 
      */
     public $CurrencyIsoEnum;
 
@@ -76,17 +74,17 @@ class CreateOrderRequest extends AbstractEntity
      * 
      * Obrigatoriedade: Não obrigatório.
      * 
-     * @var string 
      * @see \MundiPagg\Entity\Enum\EmailUpdateToBuyerEnum
+     * @var string 
      */
     public $EmailUpdateToBuyerEnum;
 
     /**
-     * Identificação da loja na plataforma One.
+     * Identificação da loja na plataforma One. (GUID)
      * 
      * Obrigatoriedade: Todas operações.
      * 
-     * @var string GUID
+     * @var string
      */
     public $MerchantKey;
 
@@ -120,11 +118,11 @@ class CreateOrderRequest extends AbstractEntity
     public $ShoppingCart;
 
     /**
-     * Identificador da requisição dentro da plataforma One.
+     * Identificador da requisição dentro da plataforma One. (GUID)
      * 
      * Obrigatoriedade: Não obrigatório.
      * 
-     * @var string GUID 
+     * @var string 
      */
     public $RequestKey;
 
@@ -155,7 +153,7 @@ class CreateOrderRequest extends AbstractEntity
         return $this->BoletoTransactionCollection;
     }
 
-    public function setBoletoTransactionCollection(\MundiPagg\Entity\BoletoTransaction $BoletoTransactionCollection)
+    public function setBoletoTransactionCollection(\MundiPagg\Entity\BoletoTransactionCollection $BoletoTransactionCollection)
     {
         $this->BoletoTransactionCollection = $BoletoTransactionCollection;
         return $this;
@@ -259,5 +257,6 @@ class CreateOrderRequest extends AbstractEntity
         $this->RequestKey = $RequestKey;
         return $this;
     }
+
 
 }

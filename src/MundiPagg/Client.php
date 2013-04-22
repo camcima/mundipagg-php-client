@@ -56,12 +56,23 @@ class Client
         return $this->soapClient;
     }
 
+    /**
+     * Create Order
+     * 
+     * @param \MundiPagg\Entity\CreateOrderRequest $createOrderRequest
+     * @return \MundiPagg\Entity\CreateOrderResult
+     */
     public function createOrder(CreateOrderRequest $createOrderRequest)
     {
-        $requestParams = $this->getSoapVariables($createOrderRequest);
-        var_dump($requestParams);
-        $result = $this->getSoapClient()->CreateOrder($requestParams);
-        return $result;
+        $requestParams = $this->getSoapClient()->getSoapVariables($createOrderRequest, true, false);
+        $soapResult = $this->getSoapClient()->CreateOrder($requestParams);
+        $resultMap = array(
+            'array|BoletoTransactionResult' => '\MundiPagg\Entity\BoletoTransactionResult',
+            'array|CreditCardTransactionResult' => '\MundiPagg\Entity\CreditCardTransactionResult'
+        );
+        $mappedResult = $this->getSoapClient()->mapSoapResult($soapResult, 'CreateOrderResult', $resultMap, '\MundiPagg\Entity\\');
+        /* @var $mappedResult \MundiPagg\Entity\CreateOrderResult */
+        return $mappedResult;
     }
 
     /**
@@ -101,4 +112,5 @@ class Client
         }
         return $arr;
     }
+
 }
