@@ -12,7 +12,7 @@
 >
     <testsuites>
         <testsuite name="MundiPagg Library Test Suite">
-            <directory>./tests/</directory>
+            <directory>./src/MundiPagg/Test/</directory>
         </testsuite>
     </testsuites>
 </phpunit>

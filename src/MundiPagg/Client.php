@@ -2,7 +2,7 @@
 
 namespace MundiPagg;
 
-use BeSimple\SoapClient\SoapClient;
+use Camcima\Soap\Client as SoapClient;
 use MundiPagg\Entity\CreateOrderRequest;
 
 /**
@@ -25,7 +25,7 @@ class Client
     /**
      * Soap Client
      * 
-     * @var \BeSimple\SoapClient\SoapClient 
+     * @var \Camcima\Soap\Client
      */
     protected $soapClient;
 
@@ -36,19 +36,18 @@ class Client
         $defaultOptions = array(
             'encoding' => 'UTF-8',
             'trace' => true,
-            'exceptions' => true,
-//            'classmap' => Classmap::$classmap
+            'exceptions' => true
         );
 
         $mergedOptions = array_merge($defaultOptions, $options);
 
-        $this->soapClient = new \SoapClient($wsdlUrl, $mergedOptions);
+        $this->soapClient = new SoapClient($wsdlUrl, $mergedOptions);
     }
 
     /**
      * Get SOAP Client
      * 
-     * @return \BeSimple\SoapClient\SoapClient
+     * @return \Camcima\Soap\Client
      */
     public function getSoapClient()
     {
