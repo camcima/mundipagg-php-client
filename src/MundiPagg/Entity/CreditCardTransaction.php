@@ -115,6 +115,7 @@ class CreditCardTransaction extends AbstractEntity
      * 
      * Obrigatoriedade: Obrigatório.
      * 
+     * @see \MundiPagg\Entity\Enum\PaymentMethodCodeEnum
      * @var int 
      */
     public $PaymentMethodCode;
@@ -330,6 +331,5 @@ class CreditCardTransaction extends AbstractEntity
         $this->TransactionReference = $TransactionReference;
         return $this;
     }
-
 
 }
