@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "e124053ed1fa55343d23119ff160b4af",
+    "hash": "83be879a9c694ecbd83a9b2a5c500900",
     "packages": [
         {
             "name": "camcima/camcima-soap-client",
