@@ -11,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/camcima/camcima-soap-client.git",
-                "reference": "c1c0b0d1856d8d342ef1ae086bbf06e7d4eaca79"
+                "reference": "44325e40c5643c750427a36983c154093f5a2989"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/camcima/camcima-soap-client/zipball/c1c0b0d1856d8d342ef1ae086bbf06e7d4eaca79",
-                "reference": "c1c0b0d1856d8d342ef1ae086bbf06e7d4eaca79",
+                "url": "https://api.github.com/repos/camcima/camcima-soap-client/zipball/44325e40c5643c750427a36983c154093f5a2989",
+                "reference": "44325e40c5643c750427a36983c154093f5a2989",
                 "shasum": ""
             },
             "require": {
@@ -33,7 +33,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "Wrapper around PHP SoapClient class",
-            "time": "2013-04-22 14:45:18"
+            "time": "2013-04-25 14:32:44"
         }
     ],
     "packages-dev": [
