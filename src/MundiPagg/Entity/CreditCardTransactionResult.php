@@ -94,7 +94,7 @@ class CreditCardTransactionResult extends AbstractEntity {
     /**
      * Data que a transação será executada.
      * 
-     * @var dateTime $DueDate
+     * @var \DateTime $DueDate
      * @access public
      */
     public $DueDate;
@@ -275,7 +275,7 @@ class CreditCardTransactionResult extends AbstractEntity {
         return $this->DueDate;
     }
 
-    public function setDueDate(dateTime $DueDate) {
+    public function setDueDate(\DateTime $DueDate) {
         $this->DueDate = $DueDate;
         return $this;
     }
