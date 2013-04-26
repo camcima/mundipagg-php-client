@@ -74,7 +74,8 @@ class ManageOrderResult extends AbstractEntity
     /**
      * Tipo de operação.
      * 
-     * @var \MundiPagg\Entity\Enum\ManageOrderOperationEnum 
+     * @see \MundiPagg\Entity\Enum\ManageOrderOperationEnum
+     * @var string
      */
     public $ManageOrderOperationEnum;
 
@@ -138,7 +139,7 @@ class ManageOrderResult extends AbstractEntity
         return $this->ErrorReport;
     }
 
-    public function setErrorReport(\MundiPagg\Entity\ErrorReport $ErrorReport)
+    public function setErrorReport(ErrorReport $ErrorReport)
     {
         $this->ErrorReport = $ErrorReport;
         return $this;
@@ -193,7 +194,7 @@ class ManageOrderResult extends AbstractEntity
         return $this->ManageOrderOperationEnum;
     }
 
-    public function setManageOrderOperationEnum(\MundiPagg\Entity\Enum\ManageOrderOperationEnum $ManageOrderOperationEnum)
+    public function setManageOrderOperationEnum($ManageOrderOperationEnum)
     {
         $this->ManageOrderOperationEnum = $ManageOrderOperationEnum;
         return $this;
