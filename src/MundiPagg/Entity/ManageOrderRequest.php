@@ -9,6 +9,7 @@ namespace MundiPagg\Entity;
  */
 class ManageOrderRequest extends AbstractEntity
 {
+
     /**
      * Coleção de CreditCardTransactionRequest que contém
      * os resultados das operações que foram solicitadas no Request.
@@ -72,4 +73,69 @@ class ManageOrderRequest extends AbstractEntity
      */
     public $RequestKey;
 
+    public function getManageCreditCardTransactionCollection()
+    {
+        return $this->ManageCreditCardTransactionCollection;
+    }
+
+    public function setManageCreditCardTransactionCollection($ManageCreditCardTransactionCollection)
+    {
+        $this->ManageCreditCardTransactionCollection = $ManageCreditCardTransactionCollection;
+        return $this;
+    }
+
+    public function getManageOrderOperationEnum()
+    {
+        return $this->ManageOrderOperationEnum;
+    }
+
+    public function setManageOrderOperationEnum($ManageOrderOperationEnum)
+    {
+        $this->ManageOrderOperationEnum = $ManageOrderOperationEnum;
+        return $this;
+    }
+
+    public function getMerchantKey()
+    {
+        return $this->MerchantKey;
+    }
+
+    public function setMerchantKey($MerchantKey)
+    {
+        $this->MerchantKey = $MerchantKey;
+        return $this;
+    }
+
+    public function getOrderKey()
+    {
+        return $this->OrderKey;
+    }
+
+    public function setOrderKey($OrderKey)
+    {
+        $this->OrderKey = $OrderKey;
+        return $this;
+    }
+
+    public function getOrderReference()
+    {
+        return $this->OrderReference;
+    }
+
+    public function setOrderReference($OrderReference)
+    {
+        $this->OrderReference = $OrderReference;
+        return $this;
+    }
+
+    public function getRequestKey()
+    {
+        return $this->RequestKey;
+    }
+
+    public function setRequestKey($RequestKey)
+    {
+        $this->RequestKey = $RequestKey;
+        return $this;
+    }
 }

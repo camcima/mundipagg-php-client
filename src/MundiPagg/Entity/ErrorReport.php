@@ -22,7 +22,7 @@ class ErrorReport extends AbstractEntity
      * Coleção de objetos do tipo ErrorItem.
      * 
      * @see \MundiPagg\Entity\ErrorItem
-     * @var array $ErrorItemCollection
+     * @var \MundiPagg\Entity\ErrorItemCollection $ErrorItemCollection
      * @access public
      */
     public $ErrorItemCollection;
