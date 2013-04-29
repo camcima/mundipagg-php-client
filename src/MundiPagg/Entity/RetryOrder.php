@@ -9,6 +9,7 @@ namespace MundiPagg\Entity;
  */
 class RetryOrder extends AbstractEntity
 {
+
     /**
      * 
      * @var RetryOrderRequest $manualRetryRequest
@@ -16,13 +17,4 @@ class RetryOrder extends AbstractEntity
      */
     public $manualRetryRequest;
 
-    /**
-     * 
-     * @param RetryOrderRequest $manualRetryRequest
-     * @access public
-     */
-    public function __construct($manualRetryRequest)
-    {
-        $this->manualRetryRequest = $manualRetryRequest;
-    }
 }

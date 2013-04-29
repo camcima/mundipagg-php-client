@@ -9,47 +9,33 @@ namespace MundiPagg\Entity;
  */
 class GetInstantBuyDataRequest extends AbstractEntity
 {
+
     /**
      * 
-     * @var guid $BuyerKey
+     * @var string $BuyerKey (GUID)
      * @access public
      */
     public $BuyerKey;
 
     /**
      * 
-     * @var guid $InstantBuyKey
+     * @var string $InstantBuyKey (GUID)
      * @access public
      */
     public $InstantBuyKey;
 
     /**
      * 
-     * @var guid $MerchantKey
+     * @var string $MerchantKey (GUID)
      * @access public
      */
     public $MerchantKey;
 
     /**
      * 
-     * @var guid $RequestKey
+     * @var string $RequestKey (GUID)
      * @access public
      */
     public $RequestKey;
 
-    /**
-     * 
-     * @param guid $BuyerKey
-     * @param guid $InstantBuyKey
-     * @param guid $MerchantKey
-     * @param guid $RequestKey
-     * @access public
-     */
-    public function __construct($BuyerKey, $InstantBuyKey, $MerchantKey, $RequestKey)
-    {
-        $this->BuyerKey = $BuyerKey;
-        $this->InstantBuyKey = $InstantBuyKey;
-        $this->MerchantKey = $MerchantKey;
-        $this->RequestKey = $RequestKey;
-    }
 }

@@ -9,16 +9,17 @@ namespace MundiPagg\Entity;
  */
 class RetryOrderRequest extends AbstractEntity
 {
+
     /**
      * 
-     * @var guid $MerchantKey
+     * @var string $MerchantKey (GUID)
      * @access public
      */
     public $MerchantKey;
 
     /**
      * 
-     * @var guid $OrderKey
+     * @var string $OrderKey (GUID)
      * @access public
      */
     public $OrderKey;
@@ -32,7 +33,7 @@ class RetryOrderRequest extends AbstractEntity
 
     /**
      * 
-     * @var guid $RequestKey
+     * @var string $RequestKey (GUID)
      * @access public
      */
     public $RequestKey;
@@ -44,21 +45,4 @@ class RetryOrderRequest extends AbstractEntity
      */
     public $RetryOrderCreditCardTransactionRequestCollection;
 
-    /**
-     * 
-     * @param guid $MerchantKey
-     * @param guid $OrderKey
-     * @param string $OrderReference
-     * @param guid $RequestKey
-     * @param array $RetryOrderCreditCardTransactionRequestCollection
-     * @access public
-     */
-    public function __construct($MerchantKey, $OrderKey, $OrderReference, $RequestKey, $RetryOrderCreditCardTransactionRequestCollection)
-    {
-        $this->MerchantKey = $MerchantKey;
-        $this->OrderKey = $OrderKey;
-        $this->OrderReference = $OrderReference;
-        $this->RequestKey = $RequestKey;
-        $this->RetryOrderCreditCardTransactionRequestCollection = $RetryOrderCreditCardTransactionRequestCollection;
-    }
 }

@@ -9,6 +9,7 @@ namespace MundiPagg\Entity;
  */
 class GetInstantBuyDataResponse extends AbstractEntity
 {
+
     /**
      * 
      * @var GetInstantBuyDataResponse $GetInstantBuyDataResult
@@ -16,13 +17,4 @@ class GetInstantBuyDataResponse extends AbstractEntity
      */
     public $GetInstantBuyDataResult;
 
-    /**
-     * 
-     * @param GetInstantBuyDataResponse $GetInstantBuyDataResult
-     * @access public
-     */
-    public function __construct($GetInstantBuyDataResult)
-    {
-        $this->GetInstantBuyDataResult = $GetInstantBuyDataResult;
-    }
 }

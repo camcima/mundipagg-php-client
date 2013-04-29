@@ -20,7 +20,7 @@ class OrderData extends AbstractEntity
     /**
      * Identificação da Ordem na plataforma One.
      * 
-     * @var guid $OrderKey
+     * @var string $OrderKey (GUID)
      * @access public
      */
     public $OrderKey;

@@ -9,6 +9,7 @@ namespace MundiPagg\Entity;
  */
 class RetryOrderCreditCardTransactionRequest extends AbstractEntity
 {
+
     /**
      * 
      * @var string $SecurityCode
@@ -18,20 +19,9 @@ class RetryOrderCreditCardTransactionRequest extends AbstractEntity
 
     /**
      * 
-     * @var guid $TransactionKey
+     * @var string $TransactionKey (GUID)
      * @access public
      */
     public $TransactionKey;
 
-    /**
-     * 
-     * @param string $SecurityCode
-     * @param guid $TransactionKey
-     * @access public
-     */
-    public function __construct($SecurityCode, $TransactionKey)
-    {
-        $this->SecurityCode = $SecurityCode;
-        $this->TransactionKey = $TransactionKey;
-    }
 }

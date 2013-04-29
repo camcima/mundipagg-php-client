@@ -9,6 +9,7 @@ namespace MundiPagg\Entity;
  */
 class CreditCardData extends AbstractEntity
 {
+
     /**
      * 
      * @var CreditCardBrandEnum $CreditCardBrandEnum
@@ -25,7 +26,7 @@ class CreditCardData extends AbstractEntity
 
     /**
      * 
-     * @var guid $InstantBuyKey
+     * @var string $InstantBuyKey (GUID)
      * @access public
      */
     public $InstantBuyKey;
@@ -37,19 +38,4 @@ class CreditCardData extends AbstractEntity
      */
     public $IsExpiredCreditCard;
 
-    /**
-     * 
-     * @param CreditCardBrandEnum $CreditCardBrandEnum
-     * @param string $CreditCardNumber
-     * @param guid $InstantBuyKey
-     * @param boolean $IsExpiredCreditCard
-     * @access public
-     */
-    public function __construct($CreditCardBrandEnum, $CreditCardNumber, $InstantBuyKey, $IsExpiredCreditCard)
-    {
-        $this->CreditCardBrandEnum = $CreditCardBrandEnum;
-        $this->CreditCardNumber = $CreditCardNumber;
-        $this->InstantBuyKey = $InstantBuyKey;
-        $this->IsExpiredCreditCard = $IsExpiredCreditCard;
-    }
 }
