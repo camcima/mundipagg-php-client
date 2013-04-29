@@ -37,7 +37,8 @@ class Client
         $defaultOptions = array(
             'encoding' => 'UTF-8',
             'trace' => true,
-            'exceptions' => true
+            'exceptions' => true,
+            'cache_wsdl' => WSDL_CACHE_BOTH
         );
 
         $mergedOptions = array_merge($defaultOptions, $options);
