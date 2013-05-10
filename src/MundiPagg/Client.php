@@ -5,6 +5,7 @@ namespace MundiPagg;
 use Camcima\Soap\Client as SoapClient;
 use MundiPagg\Entity\CreateOrderRequest;
 use MundiPagg\Entity\ManageOrderRequest;
+use MundiPagg\Exception\InvalidSoapResponseException;
 
 /**
  * MundiPagg Client
@@ -13,6 +14,7 @@ use MundiPagg\Entity\ManageOrderRequest;
  */
 class Client
 {
+
     const WSDL_PRODUCTION_URL = 'https://transaction.mundipaggone.com/MundiPaggService.svc?wsdl';
     const WSDL_STAGING_URL = 'https://staging.mundipaggone.com/MundiPaggService.svc?wsdl';
 
@@ -68,6 +70,9 @@ class Client
     {
         $requestParams = $this->getSoapClient()->getSoapVariables($createOrderRequest, true, false);
         $soapResult = $this->getSoapClient()->CreateOrder($requestParams);
+        if (!is_object($soapResult)) {
+            throw new InvalidSoapResponseException('SOAP response is not an object');
+        }
         $resultMap = array(
             'array|BoletoTransactionResult' => '\MundiPagg\Entity\BoletoTransactionResult',
             'array|CreditCardTransactionResult' => '\MundiPagg\Entity\CreditCardTransactionResult'
@@ -87,6 +92,9 @@ class Client
     {
         $requestParams = $this->getSoapClient()->getSoapVariables($manageOrderRequest, true, false);
         $soapResult = $this->getSoapClient()->ManageOrder($requestParams);
+        if (!is_object($soapResult)) {
+            throw new InvalidSoapResponseException('SOAP response is not an object');
+        }
         $resultMap = array(
             'array|BoletoTransactionResult' => '\MundiPagg\Entity\BoletoTransactionResult',
             'array|CreditCardTransactionResult' => '\MundiPagg\Entity\CreditCardTransactionResult'
@@ -95,5 +103,4 @@ class Client
         /* @var $mappedResult \MundiPagg\Entity\ManageOrderResult */
         return $mappedResult;
     }
-
 }
