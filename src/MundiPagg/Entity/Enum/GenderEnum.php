@@ -9,6 +9,7 @@ namespace MundiPagg\Entity\Enum;
  */
 class GenderEnum
 {
+
     /**
      * Gender Enumerator
      */

@@ -9,6 +9,7 @@ namespace MundiPagg\Entity\Enum;
  */
 class CreditCardTransactionStatusEnum
 {
+
     /**
      * Credit Card Transaction Status Enumerator
      */

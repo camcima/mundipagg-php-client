@@ -9,6 +9,7 @@ namespace MundiPagg\Entity\Enum;
  */
 class CreditCardBrandEnum
 {
+
     /**
      * Credit Card Brand Enumerator
      */

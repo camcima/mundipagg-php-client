@@ -9,6 +9,7 @@ namespace MundiPagg\Entity;
  */
 class ShoppingCartItem extends AbstractEntity
 {
+
     /**
      * Descrição
      * 

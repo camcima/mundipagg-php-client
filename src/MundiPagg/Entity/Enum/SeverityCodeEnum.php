@@ -9,6 +9,7 @@ namespace MundiPagg\Entity\Enum;
  */
 class SeverityCodeEnum
 {
+
     /**
      * Severity Code Enumerator
      */

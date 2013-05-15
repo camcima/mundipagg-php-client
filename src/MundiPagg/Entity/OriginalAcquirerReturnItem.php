@@ -9,6 +9,7 @@ namespace MundiPagg\Entity;
  */
 class OriginalAcquirerReturnItem extends AbstractEntity
 {
+
     /**
      * Chave de identificação da adquirente.
      * 

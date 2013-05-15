@@ -9,6 +9,7 @@ namespace MundiPagg\Entity;
  */
 class CreditCardTransactionCollection extends AbstractEntity
 {
+
     /**
      * Credit Card Transactions
      * 
@@ -27,5 +28,4 @@ class CreditCardTransactionCollection extends AbstractEntity
         $this->CreditCardTransaction[] = $creditCardTransaction;
         return $this;
     }
-
 }

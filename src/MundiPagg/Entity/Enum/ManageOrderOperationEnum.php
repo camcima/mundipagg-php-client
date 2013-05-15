@@ -9,6 +9,7 @@ namespace MundiPagg\Entity\Enum;
  */
 class ManageOrderOperationEnum
 {
+
     /**
      *  Manage Order Operation Enumerator
      */

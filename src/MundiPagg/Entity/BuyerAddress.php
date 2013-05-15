@@ -9,6 +9,7 @@ namespace MundiPagg\Entity;
  */
 class BuyerAddress extends AbstractEntity
 {
+
     /**
      * Tipo de Endereço.
      * 

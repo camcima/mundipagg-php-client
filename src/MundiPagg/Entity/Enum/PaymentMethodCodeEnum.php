@@ -9,6 +9,7 @@ namespace MundiPagg\Entity\Enum;
  */
 class PaymentMethodCodeEnum
 {
+
     /**
      * Payment Method Code Enumerator
      */

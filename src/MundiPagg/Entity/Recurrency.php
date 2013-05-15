@@ -9,6 +9,7 @@ namespace MundiPagg\Entity;
  */
 class Recurrency extends AbstractEntity
 {
+
     /**
      * Data que inicia a cobrança.
      * Caso a data seja inválida, para não perder a aprovação da transação,

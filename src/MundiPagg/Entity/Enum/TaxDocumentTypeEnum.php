@@ -9,6 +9,7 @@ namespace MundiPagg\Entity\Enum;
  */
 class TaxDocumentTypeEnum
 {
+
     /**
      *  Tax Document Type Enumerator
      */

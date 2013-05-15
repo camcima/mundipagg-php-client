@@ -7,7 +7,8 @@ namespace MundiPagg\Entity;
  *
  * @author Carlos Cima
  */
-class CreditCardTransactionResult extends AbstractEntity {
+class CreditCardTransactionResult extends AbstractEntity
+{
 
     /**
      * Mensagem de retorno da adquirente.
@@ -181,191 +182,233 @@ class CreditCardTransactionResult extends AbstractEntity {
      */
     public $OriginalAcquirerReturnCollection;
 
-    public function getAcquirerMessage() {
+    public function getAcquirerMessage()
+    {
         return $this->AcquirerMessage;
     }
 
-    public function setAcquirerMessage($AcquirerMessage) {
+    public function setAcquirerMessage($AcquirerMessage)
+    {
         $this->AcquirerMessage = $AcquirerMessage;
         return $this;
     }
 
-    public function getAcquirerReturnCode() {
+    public function getAcquirerReturnCode()
+    {
         return $this->AcquirerReturnCode;
     }
 
-    public function setAcquirerReturnCode($AcquirerReturnCode) {
+    public function setAcquirerReturnCode($AcquirerReturnCode)
+    {
         $this->AcquirerReturnCode = $AcquirerReturnCode;
         return $this;
     }
 
-    public function getAmountInCents() {
+    public function getAmountInCents()
+    {
         return $this->AmountInCents;
     }
 
-    public function setAmountInCents($AmountInCents) {
+    public function setAmountInCents($AmountInCents)
+    {
         $this->AmountInCents = $AmountInCents;
         return $this;
     }
 
-    public function getAuthorizationCode() {
+    public function getAuthorizationCode()
+    {
         return $this->AuthorizationCode;
     }
 
-    public function setAuthorizationCode($AuthorizationCode) {
+    public function setAuthorizationCode($AuthorizationCode)
+    {
         $this->AuthorizationCode = $AuthorizationCode;
         return $this;
     }
 
-    public function getAuthorizedAmountInCents() {
+    public function getAuthorizedAmountInCents()
+    {
         return $this->AuthorizedAmountInCents;
     }
 
-    public function setAuthorizedAmountInCents($AuthorizedAmountInCents) {
+    public function setAuthorizedAmountInCents($AuthorizedAmountInCents)
+    {
         $this->AuthorizedAmountInCents = $AuthorizedAmountInCents;
         return $this;
     }
 
-    public function getCapturedAmountInCents() {
+    public function getCapturedAmountInCents()
+    {
         return $this->CapturedAmountInCents;
     }
 
-    public function setCapturedAmountInCents($CapturedAmountInCents) {
+    public function setCapturedAmountInCents($CapturedAmountInCents)
+    {
         $this->CapturedAmountInCents = $CapturedAmountInCents;
         return $this;
     }
 
-    public function getCreditCardNumber() {
+    public function getCreditCardNumber()
+    {
         return $this->CreditCardNumber;
     }
 
-    public function setCreditCardNumber($CreditCardNumber) {
+    public function setCreditCardNumber($CreditCardNumber)
+    {
         $this->CreditCardNumber = $CreditCardNumber;
         return $this;
     }
 
-    public function getCreditCardOperationEnum() {
+    public function getCreditCardOperationEnum()
+    {
         return $this->CreditCardOperationEnum;
     }
 
-    public function setCreditCardOperationEnum($CreditCardOperationEnum) {
+    public function setCreditCardOperationEnum($CreditCardOperationEnum)
+    {
         $this->CreditCardOperationEnum = $CreditCardOperationEnum;
         return $this;
     }
 
-    public function getCreditCardTransactionStatusEnum() {
+    public function getCreditCardTransactionStatusEnum()
+    {
         return $this->CreditCardTransactionStatusEnum;
     }
 
-    public function setCreditCardTransactionStatusEnum($CreditCardTransactionStatusEnum) {
+    public function setCreditCardTransactionStatusEnum($CreditCardTransactionStatusEnum)
+    {
         $this->CreditCardTransactionStatusEnum = $CreditCardTransactionStatusEnum;
         return $this;
     }
 
-    public function getCustomStatus() {
+    public function getCustomStatus()
+    {
         return $this->CustomStatus;
     }
 
-    public function setCustomStatus($CustomStatus) {
+    public function setCustomStatus($CustomStatus)
+    {
         $this->CustomStatus = $CustomStatus;
         return $this;
     }
 
-    public function getDueDate() {
+    public function getDueDate()
+    {
         return $this->DueDate;
     }
 
-    public function setDueDate(\DateTime $DueDate) {
+    public function setDueDate(\DateTime $DueDate)
+    {
         $this->DueDate = $DueDate;
         return $this;
     }
 
-    public function getExternalTimeInMilliseconds() {
+    public function getExternalTimeInMilliseconds()
+    {
         return $this->ExternalTimeInMilliseconds;
     }
 
-    public function setExternalTimeInMilliseconds($ExternalTimeInMilliseconds) {
+    public function setExternalTimeInMilliseconds($ExternalTimeInMilliseconds)
+    {
         $this->ExternalTimeInMilliseconds = $ExternalTimeInMilliseconds;
         return $this;
     }
 
-    public function getInstantBuyKey() {
+    public function getInstantBuyKey()
+    {
         return $this->InstantBuyKey;
     }
 
-    public function setInstantBuyKey($InstantBuyKey) {
+    public function setInstantBuyKey($InstantBuyKey)
+    {
         $this->InstantBuyKey = $InstantBuyKey;
         return $this;
     }
 
-    public function getRefundedAmountInCents() {
+    public function getRefundedAmountInCents()
+    {
         return $this->RefundedAmountInCents;
     }
 
-    public function setRefundedAmountInCents($RefundedAmountInCents) {
+    public function setRefundedAmountInCents($RefundedAmountInCents)
+    {
         $this->RefundedAmountInCents = $RefundedAmountInCents;
         return $this;
     }
 
-    public function getSuccess() {
+    public function getSuccess()
+    {
         return $this->Success;
     }
 
-    public function setSuccess($Success) {
+    public function setSuccess($Success)
+    {
         $this->Success = $Success;
         return $this;
     }
 
-    public function getTransactionIdentifier() {
+    public function getTransactionIdentifier()
+    {
         return $this->TransactionIdentifier;
     }
 
-    public function setTransactionIdentifier($TransactionIdentifier) {
+    public function setTransactionIdentifier($TransactionIdentifier)
+    {
         $this->TransactionIdentifier = $TransactionIdentifier;
         return $this;
     }
 
-    public function getTransactionKey() {
+    public function getTransactionKey()
+    {
         return $this->TransactionKey;
     }
 
-    public function setTransactionKey($TransactionKey) {
+    public function setTransactionKey($TransactionKey)
+    {
         $this->TransactionKey = $TransactionKey;
         return $this;
     }
 
-    public function getTransactionReference() {
+    public function getTransactionReference()
+    {
         return $this->TransactionReference;
     }
 
-    public function setTransactionReference($TransactionReference) {
+    public function setTransactionReference($TransactionReference)
+    {
         $this->TransactionReference = $TransactionReference;
         return $this;
     }
 
-    public function getUniqueSequentialNumber() {
+    public function getUniqueSequentialNumber()
+    {
         return $this->UniqueSequentialNumber;
     }
 
-    public function setUniqueSequentialNumber($UniqueSequentialNumber) {
+    public function setUniqueSequentialNumber($UniqueSequentialNumber)
+    {
         $this->UniqueSequentialNumber = $UniqueSequentialNumber;
         return $this;
     }
 
-    public function getVoidedAmountInCents() {
+    public function getVoidedAmountInCents()
+    {
         return $this->VoidedAmountInCents;
     }
 
-    public function setVoidedAmountInCents($VoidedAmountInCents) {
+    public function setVoidedAmountInCents($VoidedAmountInCents)
+    {
         $this->VoidedAmountInCents = $VoidedAmountInCents;
         return $this;
     }
 
-    public function getOriginalAcquirerReturnCollection() {
+    public function getOriginalAcquirerReturnCollection()
+    {
         return $this->OriginalAcquirerReturnCollection;
     }
 
-    public function setOriginalAcquirerReturnCollection($OriginalAcquirerReturnCollection) {
+    public function setOriginalAcquirerReturnCollection($OriginalAcquirerReturnCollection)
+    {
         $this->OriginalAcquirerReturnCollection = $OriginalAcquirerReturnCollection;
         return $this;
     }

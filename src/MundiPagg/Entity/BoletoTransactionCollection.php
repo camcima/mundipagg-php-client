@@ -9,6 +9,7 @@ namespace MundiPagg\Entity;
  */
 class BoletoTransactionCollection extends AbstractEntity
 {
+
     /**
      * Boleto Transactions
      * 

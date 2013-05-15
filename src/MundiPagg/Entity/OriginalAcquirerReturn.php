@@ -9,6 +9,7 @@ namespace MundiPagg\Entity;
  */
 class OriginalAcquirerReturn extends AbstractEntity
 {
+
     /**
      * Informações do retorno da adquirente.
      * 

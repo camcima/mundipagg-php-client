@@ -9,6 +9,7 @@ namespace MundiPagg\Entity;
  */
 class CreditCardTransaction extends AbstractEntity
 {
+
     /**
      * Valor total em centavos a ser passado na transação de cartão de crédito.
      * 
@@ -331,5 +332,4 @@ class CreditCardTransaction extends AbstractEntity
         $this->TransactionReference = $TransactionReference;
         return $this;
     }
-
 }

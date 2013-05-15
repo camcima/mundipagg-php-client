@@ -9,6 +9,7 @@ namespace MundiPagg\Entity;
  */
 class BoletoTransactionResultCollection extends AbstractEntity
 {
+
     /**
      * Boleto Transaction Results
      * 
@@ -25,5 +26,4 @@ class BoletoTransactionResultCollection extends AbstractEntity
     {
         $this->BoletoTransactionResult[] = $boletoTransactionResult;
     }
-
 }

@@ -9,6 +9,7 @@ namespace MundiPagg\Entity;
  */
 class OrderData extends AbstractEntity
 {
+
     /**
      * Data que a ordem foi criada.
      * 

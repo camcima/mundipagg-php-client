@@ -20,6 +20,7 @@ use MundiPagg\Entity\Enum\ManageOrderOperationEnum;
  */
 class ClientTest extends \PHPUnit_Framework_TestCase
 {
+
     const FIXTURE_MERCHANT_KEY = 'FB76E29D-427F-45B2-AD49-F99715EF46B5';
 
     /**
@@ -172,5 +173,4 @@ class ClientTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('Captured', $creditCardTransactionResult->CreditCardTransactionStatusEnum);
         $this->assertTrue($creditCardTransactionResult->Success);
     }
-
 }

@@ -9,6 +9,7 @@ namespace MundiPagg\Entity;
  */
 class QueryOrderRequest extends AbstractEntity
 {
+
     /**
      * Identificação da loja na plataforma One. (GUID)
      * 

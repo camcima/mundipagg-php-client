@@ -9,6 +9,7 @@ namespace MundiPagg\Entity\Enum;
  */
 class CurrencyIsoEnum
 {
+
     /**
      * Currency ISO Enumerator
      */

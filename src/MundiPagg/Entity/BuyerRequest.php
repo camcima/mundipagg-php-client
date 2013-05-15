@@ -9,6 +9,7 @@ namespace MundiPagg\Entity;
  */
 class BuyerRequest extends AbstractEntity
 {
+
     /**
      * Coleção de Endereços do Buyer
      * 

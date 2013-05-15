@@ -9,6 +9,7 @@ namespace MundiPagg\Entity;
  */
 class ManageCreditCardTransactionRequest extends AbstractEntity
 {
+
     /**
      * Valor total da transação em centavos.
      * 

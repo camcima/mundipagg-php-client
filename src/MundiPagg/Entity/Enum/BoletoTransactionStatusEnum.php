@@ -9,6 +9,7 @@ namespace MundiPagg\Entity\Enum;
  */
 class BoletoTransactionStatusEnum
 {
+
     /**
      * Boleto Transaction Status Enumerator
      */

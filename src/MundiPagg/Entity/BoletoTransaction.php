@@ -9,6 +9,7 @@ namespace MundiPagg\Entity;
  */
 class BoletoTransaction extends AbstractEntity
 {
+
     /**
      * Valor do boleto em centavos.
      * 

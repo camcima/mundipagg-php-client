@@ -9,6 +9,7 @@ namespace MundiPagg\Entity\Enum;
  */
 class ErrorCategoryEnum
 {
+
     /**
      * Error Category Enumerator
      */

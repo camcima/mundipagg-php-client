@@ -9,6 +9,7 @@ namespace MundiPagg\Entity;
  */
 class QueryOrderResponse extends AbstractEntity
 {
+
     /**
      * Coleção de pedidos que pertencem a ordem.
      * 

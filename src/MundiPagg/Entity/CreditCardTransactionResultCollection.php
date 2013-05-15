@@ -7,7 +7,8 @@ namespace MundiPagg\Entity;
  *
  * @author Carlos Cima
  */
-class CreditCardTransactionResultCollection extends AbstractEntity {
+class CreditCardTransactionResultCollection extends AbstractEntity
+{
 
     /**
      * Credit Card Transaction Results
@@ -21,7 +22,8 @@ class CreditCardTransactionResultCollection extends AbstractEntity {
      * 
      * @return array
      */
-    public function getCreditCardTransactionResult() {
+    public function getCreditCardTransactionResult()
+    {
         return $this->CreditCardTransactionResult;
     }
 
@@ -31,7 +33,8 @@ class CreditCardTransactionResultCollection extends AbstractEntity {
      * @param \MundiPagg\Entity\CreditCardTransactionResult $creditCardTransactionResult
      * @return \MundiPagg\Entity\CreditCardTransactionResultCollection
      */
-    public function addCreditCardTransactionResult(CreditCardTransactionResult $creditCardTransactionResult) {
+    public function addCreditCardTransactionResult(CreditCardTransactionResult $creditCardTransactionResult)
+    {
         $this->CreditCardTransactionResult[] = $creditCardTransactionResult;
         return $this;
     }

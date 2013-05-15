@@ -9,6 +9,7 @@ namespace MundiPagg\Entity;
  */
 class CreateOrderRequest extends AbstractEntity
 {
+
     /**
      * Valor total do pedido em centavos. Ex( R$ 1,00 = 100).
      * 
@@ -257,6 +258,4 @@ class CreateOrderRequest extends AbstractEntity
         $this->RequestKey = $RequestKey;
         return $this;
     }
-
-
 }

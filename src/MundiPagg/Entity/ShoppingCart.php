@@ -9,6 +9,7 @@ namespace MundiPagg\Entity;
  */
 class ShoppingCart extends AbstractEntity
 {
+
     /**
      * Valor do frete.
      * 
