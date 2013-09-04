@@ -59,6 +59,16 @@ class BoletoTransaction extends AbstractEntity
      * @access public
      */
     public $NossoNumero;
+    
+    /**
+     * Enviar vazio para transações em produção e “1” para transações em homologação.
+     * 
+     * Obrigatoriedade: Obrigatório.
+     * 
+     * @see \MundiPagg\Entity\Enum\PaymentMethodCodeEnum
+     * @var int 
+     */
+    public $PaymentMethodCode;
 
     /**
      * Identificador da transação pela loja.
@@ -69,5 +79,68 @@ class BoletoTransaction extends AbstractEntity
      * @access public
      */
     public $TransactionReference;
+    
+    public function getAmountInCents() {
+        return $this->AmountInCents;
+    }
+
+    public function setAmountInCents($AmountInCents) {
+        $this->AmountInCents = $AmountInCents;
+        return $this;
+    }
+
+    public function getBankNumber() {
+        return $this->BankNumber;
+    }
+
+    public function setBankNumber($BankNumber) {
+        $this->BankNumber = $BankNumber;
+        return $this;
+    }
+
+    public function getDaysToAddInBoletoExpirationDate() {
+        return $this->DaysToAddInBoletoExpirationDate;
+    }
+
+    public function setDaysToAddInBoletoExpirationDate($DaysToAddInBoletoExpirationDate) {
+        $this->DaysToAddInBoletoExpirationDate = $DaysToAddInBoletoExpirationDate;
+        return $this;
+    }
+
+    public function getInstructions() {
+        return $this->Instructions;
+    }
+
+    public function setInstructions($Instructions) {
+        $this->Instructions = $Instructions;
+        return $this;
+    }
+
+    public function getNossoNumero() {
+        return $this->NossoNumero;
+    }
+
+    public function setNossoNumero($NossoNumero) {
+        $this->NossoNumero = $NossoNumero;
+        return $this;
+    }
+    
+    public function getPaymentMethodCode() {
+        return $this->PaymentMethodCode;
+    }
+
+    public function setPaymentMethodCode($PaymentMethodCode) {
+        $this->PaymentMethodCode = $PaymentMethodCode;
+        return $this;
+    }
+
+    public function getTransactionReference() {
+        return $this->TransactionReference;
+    }
+
+    public function setTransactionReference($TransactionReference) {
+        $this->TransactionReference = $TransactionReference;
+        return $this;
+    }
 
 }

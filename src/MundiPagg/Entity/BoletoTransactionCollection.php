@@ -25,5 +25,6 @@ class BoletoTransactionCollection extends AbstractEntity
     public function addBoletoTransaction(BoletoTransaction $boletoTransaction)
     {
         $this->BoletoTransaction[] = $boletoTransaction;
+        return $this;
     }
 }
