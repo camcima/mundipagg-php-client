@@ -60,5 +60,53 @@ class OrderData extends AbstractEntity
      * @access public
      */
     public $BoletoTransactionDataCollection;
+    
+    public function getCreateDate() {
+        return $this->CreateDate;
+    }
+
+    public function setCreateDate(\DateTime $CreateDate) {
+        $this->CreateDate = $CreateDate;
+    }
+
+    public function getOrderKey() {
+        return $this->OrderKey;
+    }
+
+    public function setOrderKey($OrderKey) {
+        $this->OrderKey = $OrderKey;
+    }
+
+    public function getOrderReference() {
+        return $this->OrderReference;
+    }
+
+    public function setOrderReference($OrderReference) {
+        $this->OrderReference = $OrderReference;
+    }
+
+    public function getOrderStatusEnum() {
+        return $this->OrderStatusEnum;
+    }
+
+    public function setOrderStatusEnum($OrderStatusEnum) {
+        $this->OrderStatusEnum = $OrderStatusEnum;
+    }
+
+    public function getCreditCardTransactionDataCollection() {
+        return $this->CreditCardTransactionDataCollection;
+    }
+
+    public function setCreditCardTransactionDataCollection($CreditCardTransactionDataCollection) {
+        $this->CreditCardTransactionDataCollection = $CreditCardTransactionDataCollection;
+    }
+
+    public function getBoletoTransactionDataCollection() {
+        return $this->BoletoTransactionDataCollection;
+    }
+
+    public function setBoletoTransactionDataCollection($BoletoTransactionDataCollection) {
+        $this->BoletoTransactionDataCollection = $BoletoTransactionDataCollection;
+    }
 
 }
