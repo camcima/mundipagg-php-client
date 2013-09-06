@@ -3,7 +3,7 @@
 namespace MundiPagg\Entity;
 
 /**
- * QueryOrderResponse Entity
+ * QueryOrderResult Entity
  *
  * @author Carlos Cima
  */
