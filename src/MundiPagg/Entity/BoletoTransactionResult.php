@@ -82,5 +82,77 @@ class BoletoTransactionResult extends AbstractEntity
      * @access public
      */
     public $TransactionReference;
+    
+    public function getAmountInCents() {
+        return $this->AmountInCents;
+    }
+
+    public function setAmountInCents($AmountInCents) {
+        $this->AmountInCents = $AmountInCents;
+    }
+
+    public function getBarcode() {
+        return $this->Barcode;
+    }
+
+    public function setBarcode($Barcode) {
+        $this->Barcode = $Barcode;
+    }
+
+    public function getBoletoTransactionStatusEnum() {
+        return $this->BoletoTransactionStatusEnum;
+    }
+
+    public function setBoletoTransactionStatusEnum($BoletoTransactionStatusEnum) {
+        $this->BoletoTransactionStatusEnum = $BoletoTransactionStatusEnum;
+    }
+
+    public function getBoletoUrl() {
+        return $this->BoletoUrl;
+    }
+
+    public function setBoletoUrl($BoletoUrl) {
+        $this->BoletoUrl = $BoletoUrl;
+    }
+
+    public function getCustomStatus() {
+        return $this->CustomStatus;
+    }
+
+    public function setCustomStatus($CustomStatus) {
+        $this->CustomStatus = $CustomStatus;
+    }
+
+    public function getNossoNumero() {
+        return $this->NossoNumero;
+    }
+
+    public function setNossoNumero($NossoNumero) {
+        $this->NossoNumero = $NossoNumero;
+    }
+
+    public function getSuccess() {
+        return $this->Success;
+    }
+
+    public function setSuccess($Success) {
+        $this->Success = $Success;
+    }
+
+    public function getTransactionKey() {
+        return $this->TransactionKey;
+    }
+
+    public function setTransactionKey($TransactionKey) {
+        $this->TransactionKey = $TransactionKey;
+    }
+
+    public function getTransactionReference() {
+        return $this->TransactionReference;
+    }
+
+    public function setTransactionReference($TransactionReference) {
+        $this->TransactionReference = $TransactionReference;
+    }
 
 }

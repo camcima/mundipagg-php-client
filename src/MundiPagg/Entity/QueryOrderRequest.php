@@ -58,5 +58,50 @@ class QueryOrderRequest extends AbstractEntity
      * @var string 
      */
     public $Version;
+    
+    public function getMerchantKey() {
+        return $this->MerchantKey;
+    }
+
+    public function setMerchantKey($MerchantKey) {
+        $this->MerchantKey = $MerchantKey;
+        return $this;
+    }
+
+    public function getOrderKey() {
+        return $this->OrderKey;
+    }
+
+    public function setOrderKey($OrderKey) {
+        $this->OrderKey = $OrderKey;
+        return $this;
+    }
+
+    public function getOrderReference() {
+        return $this->OrderReference;
+    }
+
+    public function setOrderReference($OrderReference) {
+        $this->OrderReference = $OrderReference;
+        return $this;
+    }
+
+    public function getRequestKey() {
+        return $this->RequestKey;
+    }
+
+    public function setRequestKey($RequestKey) {
+        $this->RequestKey = $RequestKey;
+        return $this;
+    }
+
+    public function getVersion() {
+        return $this->Version;
+    }
+
+    public function setVersion($Version) {
+        $this->Version = $Version;
+        return $this;
+    }
 
 }

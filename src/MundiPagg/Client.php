@@ -6,6 +6,7 @@ use Camcima\Soap\Client as SoapClient;
 use MundiPagg\Entity\CreateOrderRequest;
 use MundiPagg\Entity\ManageOrderRequest;
 use MundiPagg\Exception\InvalidSoapResponseException;
+use MundiPagg\Entity\QueryOrderRequest;
 
 /**
  * MundiPagg Client
@@ -100,6 +101,26 @@ class Client
             'array|CreditCardTransactionResult' => '\MundiPagg\Entity\CreditCardTransactionResult'
         );
         $mappedResult = $this->getSoapClient()->mapSoapResult($soapResult, 'ManageOrderResponse', $resultMap, '\MundiPagg\Entity\\');
+        /* @var $mappedResult \MundiPagg\Entity\ManageOrderResult */
+        return $mappedResult;
+    }
+    
+    /**
+     * Query Order
+     * 
+     * @param \MundiPagg\Entity\QueryOrderRequest $queryOrderRequest
+     * @return \MundiPagg\Entity\QueryOrderResponse
+     */
+    public function queryOrder(QueryOrderRequest $queryOrderRequest){
+        $requestParams = $this->getSoapClient()->getSoapVariables($queryOrderRequest, true, false);
+        $soapResult = $this->getSoapClient()->QueryOrder($requestParams);
+        if (!is_object($soapResult)) {
+            throw new InvalidSoapResponseException('SOAP response is not an object');
+        }
+        $resultMap = array(
+            'array|OrderData' => '\MundiPagg\Entity\OrderData'
+        );
+        $mappedResult = $this->getSoapClient()->mapSoapResult($soapResult, 'QueryOrderResult', $resultMap, '\MundiPagg\Entity\\');
         /* @var $mappedResult \MundiPagg\Entity\ManageOrderResult */
         return $mappedResult;
     }
