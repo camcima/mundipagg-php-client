@@ -13,6 +13,7 @@ class PaymentMethodCodeEnum
     /**
      * Payment Method Code Enumerator
      */
+    const MUNDIPAGG_MULTIPLE = 0;
     const SIMULATOR = 1;
     const REDECARD_KOMERCI_STAGING = 2;
     const REDECARD_KOMERCI = 3;
