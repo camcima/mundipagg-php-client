@@ -78,7 +78,7 @@ class Client
             'array|BoletoTransactionResult' => '\MundiPagg\Entity\BoletoTransactionResult',
             'array|CreditCardTransactionResult' => '\MundiPagg\Entity\CreditCardTransactionResult'
         );
-        $mappedResult = $this->getSoapClient()->mapSoapResult($soapResult, 'CreateOrderResult', $resultMap, '\MundiPagg\Entity\\');
+        $mappedResult = $this->getSoapClient()->mapSoapResult($soapResult, 'CreateOrderResult', $resultMap, '\MundiPagg\Entity\\', true);
         /* @var $mappedResult \MundiPagg\Entity\CreateOrderResult */
         return $mappedResult;
     }
@@ -100,7 +100,7 @@ class Client
             'array|BoletoTransactionResult' => '\MundiPagg\Entity\BoletoTransactionResult',
             'array|CreditCardTransactionResult' => '\MundiPagg\Entity\CreditCardTransactionResult'
         );
-        $mappedResult = $this->getSoapClient()->mapSoapResult($soapResult, 'ManageOrderResponse', $resultMap, '\MundiPagg\Entity\\');
+        $mappedResult = $this->getSoapClient()->mapSoapResult($soapResult, 'ManageOrderResponse', $resultMap, '\MundiPagg\Entity\\', true);
         /* @var $mappedResult \MundiPagg\Entity\ManageOrderResult */
         return $mappedResult;
     }
@@ -120,7 +120,7 @@ class Client
         $resultMap = array(
             'array|OrderData' => '\MundiPagg\Entity\OrderData'
         );
-        $mappedResult = $this->getSoapClient()->mapSoapResult($soapResult, 'QueryOrderResult', $resultMap, '\MundiPagg\Entity\\');
+        $mappedResult = $this->getSoapClient()->mapSoapResult($soapResult, 'QueryOrderResult', $resultMap, '\MundiPagg\Entity\\', true);
         /* @var $mappedResult \MundiPagg\Entity\ManageOrderResult */
         return $mappedResult;
     }
